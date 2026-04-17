@@ -12,6 +12,22 @@ PeakPredict focuses on three main areas:
 - authenticated portfolio operations
 - exploratory price forecasting for Bitcoin
 
+## Screenshots
+
+Add your project screenshots here after publication:
+
+- Home page preview
+- Authentication flow
+- Portfolio dashboard
+- BTC prediction view
+- ML output / API result
+
+Example placeholders:
+
+![Home page screenshot](docs/screenshots/home-page.png)
+![Portfolio screenshot](docs/screenshots/portfolio.png)
+![ML prediction screenshot](docs/screenshots/ml-prediction.png)
+
 ## Tech Stack
 
 - Frontend: React, React Router, Axios, TradingView widgets, lightweight charts
