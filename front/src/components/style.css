@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+body {
+  font-family: "Poppins";
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-evenly;
+  background-image: url(../../public/images/V2CaB-Web-Herio-Desktop.webp);
+  background-size: contain;
+  background-position: center;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  /* filter: blur(5px) brightness(0.5); */
+  align-items: stretch;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(5px); /* Add this line */
+  z-index: -1;
+}
+
+.priceItem {
+  margin-bottom: 5px;
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.crypto-prices h2{
+  color: #9dcad1;
+}
+h3 {
+  color: #135faf;
+  text-align: center;
+}
+.crypto-prices {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  position:relative;
+  margin-bottom: 70px;
+  /* background-image: url(../../public/images/V2CaB-Web-Herio-Desktop.webp); */
+  top:50px;
+}
+
+.card-container {
+  display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 20px;
+ 
+}
+.card-wrapper::before,
+.card-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.card-wrapper::before {
+  left: 0;
+  /* box-shadow:  10px 0 10px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.card-wrapper::after {
+  right: 0;
+  /* box-shadow:  -10px 0 10px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.card-wrapper.shadow-left::before {
+  opacity: 1;
+}
+
+.card-wrapper.shadow-right::after {
+  opacity: 1;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 300px;
+}
+
+
+.items-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0.75rem;
+  transition: transform .5s;
+  &::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+    box-shadow: 0 8px 17px 0 rgba(135, 204, 221, 0.385), 0 6px 20px 0 rgba(157, 206, 238, 0.401);
+    content: '';
+    opacity: 0;
+    border-radius: 0.75rem;
+    z-index: -1;
+  }
+  &:hover,
+  &:focus {
+    transform: scale3d(1.006, 1.006, 1);
+    border-radius: 0.75rem;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.market-more-item {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #def0f9, #b6e3fb);
+  
+  /* background-color: #f8f9fa; */
+  border-radius: 0.75rem;
+  width: 100%;
+}
+.market-more-item:hover{
+  /* background-color: #007bff; */
+  background: linear-gradient(to right, #b3c7d3, #9cd9f9);
+
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /* width: 40px; */
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.text-container {
+  text-align: start;
+}
+
+.text-container h3 {
+  margin-bottom: 0.25rem;
+}
+
+.network {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.percentage {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.apy {
+  margin-bottom: 2rem;
+  display: block;
+  font-size: 1rem;
+}
+
+.details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.stack-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4b7d99;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+.stack-button:hover{
+  background-color: #5d9cbf;
+  transition: transform 0.6s ease-in-out;
+  transform: scale(1  .03); 
+}
+
+.show-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+::-webkit-scrollbar{
+  height: 5px;
+  /* background-color: #007bff; */
+}
+::-webkit-scrollbar-thumb{
+  height: 5px;
+  background-color: #a1bfdf;
+}
+.table-section {
+  background-color: #edfbfd;
+  color: #2c2c2c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: #2b2b2b 1px 3px 10px;
+}
+.table-section h2 {
+  color: #2c2c2c;
+}
+.table-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.table-header {
+  background-color: #b1d8e7;
+  display: flex;
+  padding: 12px;
+  font-weight: bold;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.table-header div{
+  margin-right: 25px;
+}
+
+.table-body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.table-row {
+  display: contents;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.table-row > div {
+  padding: 12px;
+}
+/* /////////////////////////////////// */
+.market-cap-section {
+  background: linear-gradient(to right, #6894db, #ddf3ff);
+  color: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: #abddeb 1px 3px 10px;
+  padding: 20px;
+}
+.market-cap-section h2{
+  color: #2b2b2b  ;
+}
+.market-cap-section p{
+  text-align-last: center;
+}
+.market-cap-section p b:first-child{
+  color:green ;
+}
+.market-cap-section p b:nth-child(2){
+  color:red ;
+}
+.market-cap-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.market-cap-value,
+.trading-volume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.market-cap-value span:first-child,
+.trading-volume span:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.trending-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.trending-container,
+.gainers-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.trending-coins,
+.gainers-coins {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-coin,
+.gainer-coin {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.view-more {
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ///////////////////info section//////////////////// */
+.crypto-section {
+  /* background: linear-gradient(to right, #87b7d1, #f1faff); */
+  color: #2b2b2b;
+  padding: 2rem;
+  text-align: center;
+}
+.crypto-section > p{
+  font-size: large;
+  color: rgb(197, 189, 189);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: #91c5e0;
+  background: url(../../public/images/18ae54156adaa40c5e2781ee3ad24dbc.jpg);
+  padding: 2rem;
+  /* max-width: 400px; */
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(153, 232, 243, 0.244);
+  filter:  brightness(0.8);
+}
+
+.feature-card h3{
+  color: #a8ecf5;
+}
+
+.feature-card p {
+  color: #f4f6f7;
+}
+.feature-icon {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+/* ***************** welcome ********************* */
+/* PredictiveInsights.css */
+.predictive-insights {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.predictive-insights .content {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 2rem;
+  /* text-align: center; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+.predictive-insights h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #bbdee2;
+}
+
+.bonus-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.bonus-box i {
+  font-size: 2rem;
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+}
+
+.bonus-box span {
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-group button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.try-now {
+  background-color: #9370db;
+  color: #fff;
+  border: none;
+}
+
+.about-us {
+  background-color: #2b2b2b;
+  color: #fff;
+  border: none;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/images/V2CaB-Web-Herio-Desktop.webp');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(0.7);
+}
+.main {
+  padding: 20px;
+}
+
+
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.auth-modal .container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+}
+
+.auth-modal .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}

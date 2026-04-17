@@ -1,0 +1,188 @@
+* {
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .crypto-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .crypto-container h2{
+    text-decoration-color: linear-gradient(to right, #44728c, #7acffe);
+    mix-blend-mode: luminosity;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  .info-column {
+    flex: 1;
+    background: linear-gradient(to right, #b6e3fb, #d0dce2);
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .form-column {
+    flex: 2;
+    background: linear-gradient(to right, #b6e3fb, #d0dce2);
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+  }
+
+  .form-column > * {
+    background: linear-gradient(to right, #b6e3fb, #d0dce2);
+  }
+  
+  .buy-crypto {
+    padding: 60px 0;
+    /* background: linear-gradient(to right, #b6e3fb, #d0dce2); */
+    /* min-height: 100vh;  */
+    display: flex;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .info-thumb img {
+    width: 50px;
+    margin-right: 20px;
+    display: block;
+  }
+  
+  .info-content h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* Form Styles */
+  .form-BuyCrypto{
+    background-color: transparent !important;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .form-title {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    text-decoration-line: underline;
+  }
+  
+  .form-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flow;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .form-BuyCrypto input[type="text"],
+  select{
+    background-color: #eee;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  .form-BuyCrypto select {
+    width: auto;
+    background-color: #c9edf2;
+    box-shadow: #33333382 3px 8px 13px 0px;
+  }
+  
+
+  .exchange-rate {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .gas-fee {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    left: 0;
+  }
+  
+  .fee-amount {
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  
+  .submit-button {
+    width: 200px;
+    padding: 15px;
+    background-color: #1d5086;
+    color: #fff;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    
+    box-shadow: #33333382 3px 8px 13px 0px;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .info-column,
+    .form-column {
+      width: 100%;
+    }
+  }
+  
