@@ -1,6 +1,6 @@
 # PeakPredict
 
-PeakPredict is a final-year academic project in ##2024 that combines a crypto market dashboard, a Spring Boot backend, and a Python-based forecasting module.
+PeakPredict is a final-year academic project in **2024** that combines a crypto market dashboard, a Spring Boot backend, and a Python-based forecasting module.
 
 The repository is organized as a publishable GitHub portfolio project: the web application is usable for a local demo, the backend provides authentication and portfolio management, and the machine learning module can be executed as a standalone BTC forecasting script.
 
